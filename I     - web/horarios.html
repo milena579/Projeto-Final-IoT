@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimentador automatico</title>
+    <link rel="stylesheet" href="horarios.css">
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="firebese"></script>
+    <!-- Add the Firebase products that you want to use -->
+    <script src="firebase"></script>
+
+    <script type="module" src="horarios.js"></script>
+</head>
+
+<body>
+    <header class="centralize">
+        <h1>For Pets</h1>
+    </header>
+    <main>
+        <div class="dash">
+            <h1>Programar horários</h1>
+            <div class="opcoes">
+                <span>
+                    <input type='radio' name="base" id="diariamente" value="0,1,2,3,4,5,6" onchange="dias_semana()">    
+                    Diariamente
+                </span>
+                <span>
+                    <input type='radio' name="base" id="seg_sexta" value="0,1,2,3,4" onchange="dias_semana()">
+                    Segunda a Sexta
+                </span>
+                <span>
+                    <input type='radio' name="base" id="personalizado" value = "" onchange="dias_semana()" > 
+                    Personalizado
+                </span>           
+                <span class="dias_semana">
+                    <input type='checkbox' name="segunda" id="segunda" value="0"> 
+                    Segunda
+
+                    <input type='checkbox' name="terca" id="terca" value="1"> 
+                    Terça
+
+                    <input type='checkbox' name="quarta" id="quarta" value="2"> 
+                    Quarta
+
+                    <input type='checkbox' name="quinta" id="quinta" value="3"> 
+                    Quinta
+
+                    <input type='checkbox' name="sexta" id="sexta" value="4"> 
+                    Sexta
+
+                    <input type='checkbox' name="sabado" id="sabado" value="5"> 
+                    Sábado
+
+                    <input type='checkbox' name="domingo" id="domingo" value="6"> 
+                    Domingo
+
+                </span>     
+            </div>
+
+            <div class="wrapper">
+                <div class="content">
+                    <div class="column">
+                        <select>
+                            <option value="Hora" id="Hora" selected disabled hidden>Hora</option>
+                        </select>
+                    </div>
+                    <div class="column">
+                        <select>
+                            <option value="Minutos" id = "Minutos" selected disabled hidden>Minutos</option>
+                        </select>
+                    </div>
+                </div>
+                <button>Confirmar alarme</button>
+            </div>
+
+
+            <a href="principal.html"><button id="voltar">  Voltar </button></a>
+        </div>
+        
+        
+    </main>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+</body>
+</html>

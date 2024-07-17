@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimentador automatico</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="firebase"></script>
+    <!-- Add the Firebase products that you want to use -->
+    <script src="firebase"></script>
+
+    <script type="module" src="grafico.js"></script>
+    <script type="module" src="./script.js"></script>
+    <script src="firebase"></script>
+</head>
+
+<body>
+    <header class="centralize">
+        <h1>Pet Feeder</h1>
+    </header>
+    <main>
+        <div class="dash">
+            <div class="lado_esquerdo">
+                <div class=" nivel centralize">
+                    <span><h1>Nivel de ração</h1></span>
+                    <h1 id="nivel_racao"></h1>
+                    <h2 id="critico">O nivel de raçao está baixo!</h2>
+                </div>
+
+                <div class="data_hora centralize">
+                    <span class="hora_atual">
+                        <span><h2>Hora:</h2></span>
+                        <h2 id="hora">10:00</h2>
+                    </span>
+                    <span class="data_atual">
+                        <span><h2>Data:</h2></span>
+                        <h2 id="data">04/07/2024</h2>
+                    </span>
+                </div>
+
+                <div class="programados centralize">
+                    <span class="programado">
+                        <span>Horário programado:</span>
+                        <h3 id = "programmed_hour"></h3>
+                    </span>
+                 
+                    <a href="horarios.html"><button id="btn_programar"> Programar Horarios </button></a>
+                
+                </div>
+            </div>
+            <div class="lado_direito">
+                <div class="botao_gato">
+                    <button id="colocar_racao" onclick="updateButton()"><p>Colocar ração</p></button>
+                </div>   
+                <div class="meses_grafico">
+                    <select class="meses" name="meses" id = 'meses'>
+                        <option value="">Escolha um mês </option>
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereiro</option>
+                        <option value="3">Março</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Maio</option>
+                        <option value="6">Junho</option>
+                        <option value="7">Julho</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setembro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
+                    </select>
+                </div>
+                <div class="grafico_racao">      
+                        <canvas id="grafico_linha" height="100%"></canvas>                 
+                </div>
+            </div>
+        </main>
+    </div>    
+   
+    <footer></footer>
+</body>
+</html>
